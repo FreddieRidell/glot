@@ -1,0 +1,47 @@
+{
+	"name": "@freddieridell/glot",
+	"version": "0.0.4",
+	"description": "a tiny, simple, powerful, expressive, i18n library",
+	"main": "lib/index.js",
+	"sideEffects": false,
+	"scripts": {
+		"test-watch": "jest --watch --bail --runInBand test",
+		"test": "jest --coverage test src",
+		"build": "NODE_ENV=production babel src --out-dir lib --minified --source-maps --presets minify,freddie-ridell",
+		"format": "prettier --write src/**/* test/**/* README.md",
+		"watch": "babel src --out-dir lib --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^10.0.1",
+		"babel-preset-freddie-ridell": "0.0.8",
+		"babel-preset-minify": "^0.5.0",
+		"date-fns": "^2.0.0-alpha.26",
+		"eslint": "^5.10.0",
+		"eslint-config-react-app": "^3.0.5",
+		"eslint-plugin-flowtype": "^3.2.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^6.1.2",
+		"eslint-plugin-react": "^7.11.1",
+		"jest-cli": "^23.6.0",
+		"prettier": "^1.15.3"
+	},
+	"babel": {
+		"presets": [
+			"freddie-ridell"
+		]
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"files": [
+		"/lib"
+	],
+	"prettier": {
+		"tabWidth": 4,
+		"trailingComma": "all",
+		"useTabs": true
+	}
+}
