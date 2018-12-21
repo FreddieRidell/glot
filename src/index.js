@@ -1,5 +1,5 @@
 const createGlot = dictionary => {
-	const parseStrings = (lang, value, strs, exprs) => {
+	const parseStrings = (lang, strs, exprs) => {
 		const key = strs.map((str, i) => str + (exprs[i] || "")).join("");
 		const found = dictionary[lang][key];
 
@@ -11,14 +11,14 @@ const createGlot = dictionary => {
 	};
 
 	const glot = options => {
-		const { lang, value, mkFn } = options;
+		const { lang, mkFn } = options;
 
 		return (head, ...tail) => {
 			if (Array.isArray(head)) {
 				if (mkFn) {
-					return mkFn(parseStrings(lang, value, head, tail));
+					return mkFn(parseStrings(lang, head, tail));
 				}
-				return parseStrings(lang, value, head, tail);
+				return parseStrings(lang, head, tail);
 			} else {
 				return glot(Object.assign({}, options, head));
 			}
