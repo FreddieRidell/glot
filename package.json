@@ -5,9 +5,9 @@
   "description": "a tiny, simple, powerful, expressive, i18n library",
   "main": "index.js",
   "scripts": {
-    "build": "for P in packages/* ; do pushd $P ; npm run build ; popd ; done", 
-    "format": "for P in packages/* ; do pushd $P ; npm run format ; popd ; done", 
-    "test": "for P in packages/* ; do pushd $P ; npm run test ; popd ; done", 
+    "build": "for P in packages/* ; do pushd $P ; npm run build ; popd ; done",
+    "format": "for P in packages/* ; do pushd $P ; npm run format ; popd ; done",
+    "test": "for P in packages/* ; do pushd $P ; npm run test ; popd ; done",
     "watch": "for P in packages/* ; do pushd $P ; ( npm run watch & ) ; popd ; done"
   },
   "repository": {
@@ -49,5 +49,8 @@
     "tabWidth": 4,
     "trailingComma": "all",
     "useTabs": true
+  },
+  "dependencies": {
+    "yalc": "^1.0.0-pre.25"
   }
 }
