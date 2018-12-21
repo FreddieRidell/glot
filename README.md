@@ -40,8 +40,8 @@ new Array(2).fill(null).map((_, i) => console.log(glot`thing_${i + 1}`));
 
 ## Todo
 
+-   [ ] write tests, full coverage
 -   [ ] write better readme
 -   [ ] create companion react component
 -   [ ] think about pluralisation
 -   [ ] tune babel config to reduce bundle size
--   [x] write tests, full coverage

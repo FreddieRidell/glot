@@ -4,11 +4,7 @@ const createGlot = dictionary => {
 		const found = dictionary[lang][key];
 
 		if (found === undefined) {
-			return `~~NO GLOT FOUND FOR ${key}!!!~~`;
-		}
-
-		if (typeof found === "function") {
-			return found(value);
+			return `NO GLOT FOR ${key}!`;
 		}
 
 		return found;
