@@ -1,5 +1,6 @@
 # Glot
 
+![min badge](https://badgen.net/bundlephobia/min/@freddieridell/glot)
 ![minzipped badge](https://badgen.net/bundlephobia/minzip/@freddieridell/glot)
 
 > A tiny, simple, powerful, expressive, i18n library
