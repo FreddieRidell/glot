@@ -1,6 +1,6 @@
 # Glot
 
-> A tiny, simple, powerful, expressive, i18n library;
+> A tiny, simple, powerful, expressive, i18n library
 
 ## Usage
 
@@ -12,7 +12,6 @@ import { format as formatDate } from "date-fns/fp";
 const glot = createGlot({
 	en: {
 		greetings: "'ello, govna'",
-		months: date => `${date.getMonth() + 1} months`,
 		date: "yyyy-MM-dd",
 		thing_1: "number one",
 		thing_2: "number two",
@@ -32,8 +31,8 @@ const foreverFrench = glot({ lang: "fra" });
 console.log(foreverFrench`greetings`);
 
 //create parameterized functions
-console.log(glot({ value: new Date() })`months`);
-console.log(glot({ mkFn: formatDate })`date`(new Date()));
+const localisedDteFormatter = glot({ mkFn: formatDate })`date`;
+console.log(localisedDteFormatter(new Date()));
 
 // interpolate values
 new Array(2).fill(null).map((_, i) => console.log(glot`thing_${i + 1}`));
@@ -43,5 +42,6 @@ new Array(2).fill(null).map((_, i) => console.log(glot`thing_${i + 1}`));
 
 -   [ ] write better readme
 -   [ ] create companion react component
--   [ ] write example usage
--   [ ] write tests, full coverage
+-   [ ] think about pluralisation
+-   [ ] tune babel config to reduce bundle size
+-   [x] write tests, full coverage
