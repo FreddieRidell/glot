@@ -7,7 +7,7 @@
 		"test-watch": "jest --watch --bail --runInBand test",
 		"test": "jest --coverage test",
 		"build": "NODE_ENV=production babel src --out-dir lib --minified --source-maps --presets minify,freddie-ridell",
-		"format": "prettier --write src/**/*",
+		"format": "prettier --write src/**/* test/**/* README.md",
 		"watch": "babel src --out-dir lib --watch"
 	},
 	"author": "",

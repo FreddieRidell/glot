@@ -1,5 +1,7 @@
 # Glot
 
+![minzipped badge](https://badgen.net/bundlephobia/minzip/@freddieridell/glot)
+
 > A tiny, simple, powerful, expressive, i18n library
 
 ## Usage
@@ -40,8 +42,9 @@ new Array(2).fill(null).map((_, i) => console.log(glot`thing_${i + 1}`));
 
 ## Todo
 
--   [ ] write tests, full coverage
--   [ ] write better readme
 -   [ ] create companion react component
 -   [ ] think about pluralisation
--   [ ] tune babel config to reduce bundle size
+-   [x] tune babel config to reduce bundle size
+-   [x] write tests, full coverage
+-   [x] write better readme
+-   [x] write better readme
