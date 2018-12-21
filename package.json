@@ -6,7 +6,7 @@
 	"scripts": {
 		"test-watch": "jest --watch --bail --runInBand test",
 		"test": "jest --coverage test",
-		"build": "NODE_ENV=production babel src --out-dir lib --minified --source-maps",
+		"build": "NODE_ENV=production babel src --out-dir lib --minified --source-maps --presets minify,freddie-ridell",
 		"format": "prettier --write src/**/*",
 		"watch": "babel src --out-dir lib --watch"
 	},

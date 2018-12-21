@@ -20,10 +20,10 @@ const createGlot = dictionary => {
 				}
 				return parseStrings(lang, value, head, tail);
 			} else {
-				return glot({
-					...options,
-					...head,
-				});
+				return glot(Object.assign({},
+					options,
+					head,
+				));
 			}
 		};
 	};
