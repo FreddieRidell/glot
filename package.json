@@ -1,6 +1,6 @@
 {
 	"name": "@freddieridell/glot",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "a tiny, simple, powerful, expressive, i18n library",
 	"main": "lib/index.js",
 	"scripts": {
