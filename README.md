@@ -43,9 +43,13 @@ new Array(2).fill(null).map((_, i) => console.log(glot`thing_${i + 1}`));
 
 ## Todo
 
--   [ ] create companion react component
--   [ ] think about pluralisation
--   [x] tune babel config to reduce bundle size
--   [x] write tests, full coverage
--   [x] write better readme
--   [x] write better readme
+- [ ] create companion react component
+- [ ] think about pluralisation
+- [ ] types
+  - [ ] reasonml
+  - [ ] flow
+  - [ ] typescript
+- [x] tune babel config to reduce bundle size
+- [x] write tests, full coverage
+- [x] write better readme
+- [x] write better readme
