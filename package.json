@@ -5,6 +5,10 @@
 	"main": "lib/index.js",
 	"sideEffects": false,
 	"homepage": "https://freddieridell.com/open-source/2018-12-glot",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FreddieRidell/glot.git"
+	},
 	"keywords": [
 		"glot",
 		"i18n",
