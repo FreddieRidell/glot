@@ -4,7 +4,7 @@
 	"description": "a tiny, simple, powerful, expressive, i18n library",
 	"main": "lib/index.js",
 	"sideEffects": false,
-	"homepage": "https://freddieridell.com/open-source/2018-12-glot",
+	"homepage": "https://freddieridell.com/open-source/glot",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FreddieRidell/glot.git"
