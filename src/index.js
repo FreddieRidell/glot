@@ -1,10 +1,14 @@
-const createGlot = dictionary => {
+module.exports = (dictionary, shouldThrow) => {
 	const parseStrings = (lang, strs, exprs) => {
 		const key = strs.map((str, i) => str + (exprs[i] || "")).join("");
 		const found = dictionary[lang][key];
 
 		if (found === undefined) {
-			return `NO GLOT FOR ${key}!`;
+			if(shouldThrow){
+				throw new Error(`NO GLOT FOR ${key}!`);
+			} else {
+				return `NO GLOT FOR ${key}!`;
+			}
 		}
 
 		return found;
@@ -27,5 +31,3 @@ const createGlot = dictionary => {
 
 	return glot;
 };
-
-export default createGlot;
