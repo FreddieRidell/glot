@@ -24,17 +24,14 @@
 	"scripts": {
 		"test-watch": "jest --watch --bail --runInBand test",
 		"test": "jest --coverage test src",
-		"build": "NODE_ENV=production babel src --out-dir lib --minified --source-maps --presets minify,freddie-ridell",
+		"build": "NODE_ENV=production MINIFY=* babel src --out-dir lib --source-maps",
 		"format": "prettier --write src/**/* test/**/* README.md",
 		"watch": "babel src --out-dir lib --watch"
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
 		"babel-eslint": "^10.0.1",
-		"babel-preset-freddie-ridell": "0.0.8",
-		"babel-preset-minify": "^0.5.0",
 		"date-fns": "^2.0.0-alpha.26",
 		"eslint": "^5.10.0",
 		"eslint-config-react-app": "^3.0.5",
@@ -47,7 +44,7 @@
 	},
 	"babel": {
 		"presets": [
-			"freddie-ridell"
+			"@freddieridell/babel-preset"
 		]
 	},
 	"eslintConfig": {
@@ -60,5 +57,8 @@
 		"tabWidth": 4,
 		"trailingComma": "all",
 		"useTabs": true
+	},
+	"dependencies": {
+		"@freddieridell/babel-preset": "0.0.2"
 	}
 }
