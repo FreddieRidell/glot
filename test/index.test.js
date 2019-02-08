@@ -1,4 +1,4 @@
-import createGlot from "../src";
+import createGlot, { smart } from "../src";
 import { format as formatDate } from "date-fns/fp";
 
 describe("glot", () => {
@@ -19,34 +19,26 @@ describe("glot", () => {
 	});
 
 	it("returns a valid key in the default language", () => {
-		expect(glot`greetings`).toMatchInlineSnapshot(`"'ello, govna'"`);
+		expect(glot`greetings`).toBe("'ello, govna'");
 	});
 
 	it("returns a warning message when an invalid key is used", () => {
-		expect(glot`INVALID_KEY`).toMatchInlineSnapshot(
-			`"NO GLOT FOR INVALID_KEY!"`,
-		);
+		expect(glot`INVALID_KEY`).toBe("NO GLOT FOR INVALID_KEY!");
 	});
 
 	it("can change the languge", () => {
-		expect(glot({ lang: "fra" })`greetings`).toMatchInlineSnapshot(
-			`"'sup, Monsieur"`,
-		);
+		expect(glot({ lang: "fra" })`greetings`).toBe("'sup, Monsieur");
 	});
 
 	it("can create formatting functions", () => {
-		expect(
-			glot({ mkFn: formatDate })`date`(new Date()),
-		).toMatchInlineSnapshot(`"2018-12-21"`);
+		expect(glot({ mkFn: formatDate })`date`(new Date("2018-12-21"))).toBe(
+			"2018-12-21",
+		);
 	});
 
 	it("can interpolate values in the template string", () => {
-		expect(new Array(2).fill(null).map((_, i) => glot`thing_${i + 1}`))
-			.toMatchInlineSnapshot(`
-Array [
-  "number one",
-  "number two",
-]
-`);
+		expect(
+			new Array(2).fill(null).map((_, i) => glot`thing_${i + 1}`),
+		).toEqual(["number one", "number two"]);
 	});
 });
